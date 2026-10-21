@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QRIS Praktis — Panduan DANA Bisnis untuk Merchant &amp; UMKM Indonesia</title>
+  <meta name="description" content="Pahami QRIS, permudah pembayaran usaha. Panduan praktis, resmi, dan mudah dipahami untuk mendaftar DANA Bisnis bagi pelaku warung, kedai, dan UMKM di Indonesia." />
+  <meta name="theme-color" content="#0E3524" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="QRIS Praktis — Panduan DANA Bisnis untuk UMKM" />
+  <meta property="og:description" content="Pahami QRIS, permudah pembayaran usaha. Panduan independen pendaftaran DANA Bisnis langsung dari HP." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/hero-umkm.jpg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Defer JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVBAR (TRANSPARENT-TO-SOLID SCROLL BEHAVIOR ~300ms)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#beranda" class="brand-logo-link" aria-label="QRIS Praktis Beranda">
+        <img src="assets/images/logo.png" alt="QRIS Praktis Logo" class="brand-logo-img" width="40" height="40" />
+        <div class="brand-text">
+          <span class="brand-title">QRIS Praktis</span>
+          <span class="brand-sub">Panduan Merchant UMKM</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <a href="#beranda" class="nav-link active" aria-current="page">Beranda</a>
+        <a href="#masalah" class="nav-link">Tantangan Usaha</a>
+        <a href="#manfaat" class="nav-link">Manfaat QRIS</a>
+        <a href="#kenalan" class="nav-link">DANA Bisnis</a>
+        <a href="#persiapan" class="nav-link">Persiapan</a>
+        <a href="#panduan" class="nav-link">Panduan Daftar</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="nav-actions">
+        <a href="#panduan" class="btn btn-sm header-cta">
+          <span class="material-symbols-outlined text-[18px]">menu_book</span>
+          <span>Lihat Panduan</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Menu Navigasi Mobile">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo-link">
+        <img src="assets/images/logo.png" alt="QRIS Praktis Logo" class="brand-logo-img" width="34" height="34" />
+        <div class="brand-text">
+          <span class="brand-title">QRIS Praktis</span>
+          <span class="brand-sub">Panduan Merchant UMKM</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Tutup menu navigasi">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links" aria-label="Navigasi Mobile">
+      <a href="#beranda" class="mobile-nav-item active">
+        <span class="material-symbols-outlined">home</span>
+        <span>Beranda</span>
+      </a>
+      <a href="#masalah" class="mobile-nav-item">
+        <span class="material-symbols-outlined">report_problem</span>
+        <span>Tantangan Usaha</span>
+      </a>
+      <a href="#manfaat" class="mobile-nav-item">
+        <span class="material-symbols-outlined">verified</span>
+        <span>Manfaat QRIS</span>
+      </a>
+      <a href="#kenalan" class="mobile-nav-item">
+        <span class="material-symbols-outlined">account_balance_wallet</span>
+        <span>Kenalan DANA Bisnis</span>
+      </a>
+      <a href="#persiapan" class="mobile-nav-item">
+        <span class="material-symbols-outlined">checklist</span>
+        <span>Persiapan Daftar</span>
+      </a>
+      <a href="#panduan" class="mobile-nav-item">
+        <span class="material-symbols-outlined">format_list_numbered</span>
+        <span>Panduan Pendaftaran</span>
+      </a>
+      <a href="#faq" class="mobile-nav-item">
+        <span class="material-symbols-outlined">help_outline</span>
+        <span>Pertanyaan (FAQ)</span>
+      </a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <a href="#panduan" class="btn btn-lime">
+        <span class="material-symbols-outlined">menu_book</span>
+        <span>Lihat Panduan Pendaftaran</span>
+      </a>
+      <div class="mobile-drawer-badge">
+        <span class="material-symbols-outlined text-[16px]">verified_user</span>
+        <span>Edukasi Independen DANA Bisnis</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main id="mainContent">
+
+    <!-- ========================================================================
+         SECTION A: HERO SECTION (FULL HEIGHT & DISTINCT PARALLAX BACKGROUND)
+         ======================================================================== -->
+    <section class="hero-section" id="beranda">
+      <!-- Parallax Background Layer (Distinct lively Indonesian cafe/warung ambiance) -->
+      <div class="hero-bg-container" id="heroBg">
+        <img src="assets/images/hero-bg.jpg" alt="Suasana ramai dan hangat warung kuliner serta kedai kopi UMKM Indonesia" class="hero-bg-image" />
+      </div>
+
+      <!-- Hero Overlays -->
+      <div class="hero-overlay"></div>
+      <div class="hero-glow-accent"></div>
+
+      <div class="container hero-content-wrap">
+        <!-- Hero Text Column -->
+        <div class="hero-text-col reveal-on-scroll">
+          <div class="eyebrow-badge eyebrow-hero">
+            <span class="pulse-dot"></span>
+            <span>PANDUAN DANA BISNIS UNTUK UMKM</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Punya Usaha? Yuk, Mulai Terima Pembayaran QRIS dengan <span class="highlight">DANA Bisnis!</span>
+          </h1>
+
+          <p class="hero-desc">
+            Pelajari persiapan dan cara daftar DANA Bisnis lewat panduan praktis yang mudah dipahami, langsung dari HP kamu.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#panduan" class="btn btn-lime">
+              <span class="material-symbols-outlined">menu_book</span>
+              <span>Lihat Panduan Pendaftaran</span>
+            </a>
+            <a href="#manfaat" class="btn btn-outline-white">
+              <span class="material-symbols-outlined">insights</span>
+              <span>Kenali Manfaat QRIS</span>
+            </a>
+          </div>
+
+          <div class="hero-microcopy">
+            <span class="material-symbols-outlined">check_circle</span>
+            <span>Khusus panduan DANA Bisnis untuk pelaku UMKM.</span>
+          </div>
+        </div>
+
+        <!-- Floating Visual Card Column (Indonesian Merchant Showcase) -->
+        <div class="hero-visual-card reveal-on-scroll">
+          <!-- Floating Badge -->
+          <div class="floating-badge badge-top">
+            <span class="material-symbols-outlined">verified</span>
+            <span>Verifikasi Praktis dari HP</span>
+          </div>
+
+          <!-- Merchant Photo Preview -->
+          <div class="hero-merchant-preview">
+            <img src="assets/images/hero-umkm.jpg" alt="Pemilik Warung Indonesia tersenyum ramah melayani transaksi QRIS" class="hero-preview-img" />
+          </div>
+
+          <!-- Simulated Payment Notification -->
+          <div class="hero-notif-card">
+            <div class="notif-icon-circle">
+              <span class="material-symbols-outlined">check</span>
+            </div>
+            <div class="notif-details">
+              <span class="notif-amount">Rp 25.000</span>
+              <span class="notif-sub">Pembayaran QRIS Berhasil</span>
+            </div>
+            <span class="notif-tag">Baru Masuk</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Scroll Down Indicator -->
+      <a href="#masalah" class="hero-scroll-indicator" aria-label="Gulir ke bagian tantangan usaha">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-text">Gulir ke Bawah</span>
+      </a>
+    </section>
+
+    <!-- ========================================================================
+         SECTION B: MASALAH UMKM (EDITORIAL SPLIT LAYOUT)
+         ======================================================================== -->
+    <section class="section-problem section-padding" id="masalah">
+      <div class="container">
+        <div class="problem-editorial-grid">
+          <!-- Left: Authentic Photo of Indonesian Warung Owner -->
+          <div class="problem-image-wrapper reveal-on-scroll">
+            <img src="assets/images/warung-merchant.jpg" alt="Pemilik warung kelontong tradisional Indonesia tersenyum memegang smartphone menerima transaksi digital" class="problem-editorial-image" />
+            <div class="problem-image-badge">
+              <span class="material-symbols-outlined">storefront</span>
+              <span>Warung UMKM Go Digital</span>
+            </div>
+          </div>
+
+          <!-- Right: Problem Description & Stacked Points -->
+          <div class="problem-content reveal-on-scroll">
+            <div class="eyebrow-badge">
+              <span class="material-symbols-outlined text-[16px]">help</span>
+              <span>Tantangan Usaha</span>
+            </div>
+
+            <h2 class="section-title">Masih Bingung Cara Mulai Pakai QRIS?</h2>
+            <p class="section-subtitle">
+              Banyak pemilik usaha ingin menyediakan pembayaran non-tunai, tetapi belum tahu harus mulai dari mana.
+            </p>
+
+            <div class="problem-items-stack">
+              <!-- Problem 1 -->
+              <div class="problem-card">
+                <div class="problem-icon-wrap">
+                  <span class="material-symbols-outlined">contact_support</span>
+                </div>
+                <div class="problem-card-body">
+                  <h3>Belum tahu cara daftar</h3>
+                  <p>Masih bingung langkah awal untuk mendapatkan QRIS bagi usaha dan formulir apa saja yang perlu diisi.</p>
+                </div>
+              </div>
+
+              <!-- Problem 2 -->
+              <div class="problem-card">
+                <div class="problem-icon-wrap">
+                  <span class="material-symbols-outlined">assignment_late</span>
+                </div>
+                <div class="problem-card-body">
+                  <h3>Takut prosesnya rumit</h3>
+                  <p>Belum memahami tahapan, syarat berkas, dan informasi yang perlu disiapkan sehingga ragu untuk mulai.</p>
+                </div>
+              </div>
+
+              <!-- Problem 3 -->
+              <div class="problem-card">
+                <div class="problem-icon-wrap">
+                  <span class="material-symbols-outlined">inventory</span>
+                </div>
+                <div class="problem-card-body">
+                  <h3>Belum memahami persiapan yang diperlukan</h3>
+                  <p>Bingung dokumen apa saja yang harus disiapkan sebelum membuka aplikasi pendaftaran di ponsel.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="problem-callout">
+              <span class="text-[20px]">💡</span>
+              <span>Tenang, kamu bisa mempelajari prosesnya dulu sebelum mulai mendaftar lewat panduan ini.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION C: MANFAAT QRIS (ASYMMETRIC BENTO GRID)
+         ======================================================================== -->
+    <section class="section-benefits section-padding" id="manfaat">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="eyebrow-badge">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+            <span>Keunggulan Digital</span>
+          </div>
+          <h2 class="section-title">Kenapa Usaha Kamu Perlu Mengenal QRIS?</h2>
+          <p class="section-subtitle">
+            Standar resmi dari Bank Indonesia agar pelanggan dari berbagai bank atau e-wallet apa saja dapat membayar cukup dengan satu kode QR.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento 1: Featured (7 columns desktop) -->
+          <div class="bento-card bento-card-main highlight-bg reveal-on-scroll">
+            <div>
+              <div class="bento-icon-container lime-bg">
+                <span class="material-symbols-outlined">qr_code_scanner</span>
+              </div>
+              <h3 class="bento-title">Memberikan Pilihan Pembayaran Non-Tunai</h3>
+              <p class="bento-text">
+                Pelanggan dapat membayar secara praktis menggunakan aplikasi dompet digital atau mobile banking apa saja tanpa perlu membawa uang fisik.
+              </p>
+            </div>
+            <div class="bento-interop-tags">
+              <span class="interop-tag"><span class="dot"></span>BCA Mobile</span>
+              <span class="interop-tag"><span class="dot"></span>Mandiri Livin'</span>
+              <span class="interop-tag"><span class="dot"></span>BRImo</span>
+              <span class="interop-tag"><span class="dot"></span>DANA</span>
+              <span class="interop-tag"><span class="dot"></span>GoPay</span>
+              <span class="interop-tag"><span class="dot"></span>OVO / ShopeePay</span>
+            </div>
+          </div>
+
+          <!-- Bento 2: (5 columns desktop) -->
+          <div class="bento-card bento-card-tall reveal-on-scroll">
+            <div>
+              <div class="bento-icon-container">
+                <span class="material-symbols-outlined">payments</span>
+              </div>
+              <h3 class="bento-title">Membantu Mengurangi Ketergantungan Uang Tunai</h3>
+              <p class="bento-text">
+                Berikan alternatif pembayaran bagi pelanggan tanpa khawatir kehilangan pembeli hanya karena tidak ada uang kembalian atau uang pas di laci kasir.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bento 3: (5 columns desktop) -->
+          <div class="bento-card bento-card-bottom-left reveal-on-scroll">
+            <div>
+              <div class="bento-icon-container">
+                <span class="material-symbols-outlined">query_stats</span>
+              </div>
+              <h3 class="bento-title">Membantu Merchant Memantau Transaksi Digital</h3>
+              <p class="bento-text">
+                Riwayat pembayaran tercatat rapi secara otomatis di aplikasi, memudahkan pencatatan buku kas harian usaha kamu tanpa khawatir selisih hitung.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bento 4: (7 columns desktop) -->
+          <div class="bento-card bento-card-bottom-right highlight-bg reveal-on-scroll">
+            <div>
+              <div class="bento-icon-container lime-bg">
+                <span class="material-symbols-outlined">storefront</span>
+              </div>
+              <h3 class="bento-title">Dapat Digunakan oleh Beragam Jenis Usaha</h3>
+              <p class="bento-text">
+                Dapat digunakan oleh warung kelontong, kedai kopi, kios pulsa, jasa pangkas rambut, kuliner kaki lima, maupun pedagang keliling yang memenuhi ketentuan.
+              </p>
+            </div>
+            <div class="bento-interop-tags">
+              <span class="interop-tag"><span class="dot"></span>Warung Makan</span>
+              <span class="interop-tag"><span class="dot"></span>Coffee Shop</span>
+              <span class="interop-tag"><span class="dot"></span>Kios Pulsa &amp; Jasa</span>
+              <span class="interop-tag"><span class="dot"></span>Toko Kelontong</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note Disclaimer -->
+        <div class="benefits-disclaimer-note reveal-on-scroll">
+          <strong>Catatan:</strong> Biaya transaksi (MDR), ketentuan merchant, dan fitur yang tersedia mengikuti aturan penyedia layanan dan regulasi QRIS yang berlaku.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION D: KENALAN DENGAN DANA BISNIS (SPLIT LAYOUT + DANA SHOWCASE IMAGE)
+         ======================================================================== -->
+    <section class="section-dana-intro section-padding" id="kenalan">
+      <div class="container">
+        <div class="split-intro-grid">
+          <!-- Left: Text & Features -->
+          <div class="dana-intro-content reveal-on-scroll">
+            <div class="eyebrow-badge">
+              <span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+              <span>Solusi Digital Merchant</span>
+            </div>
+
+            <h2 class="section-title">Kenalan dengan DANA Bisnis</h2>
+
+            <p class="section-subtitle">
+              DANA Bisnis merupakan layanan untuk membantu pelaku usaha menerima pembayaran digital sesuai fitur dan ketentuan yang berlaku. Lewat panduan ini, kamu bisa mempelajari persiapan dan langkah pendaftarannya dengan bahasa yang lugas.
+            </p>
+
+            <div class="dana-feature-list">
+              <div class="dana-feature-item">
+                <div class="dana-check-icon">
+                  <span class="material-symbols-outlined">check</span>
+                </div>
+                <div>
+                  <strong>Panduan memulai pendaftaran DANA Bisnis</strong>
+                  <span>Langkah demi langkah dipaparkan secara runtut tanpa kebingungan teknis.</span>
+                </div>
+              </div>
+
+              <div class="dana-feature-item">
+                <div class="dana-check-icon">
+                  <span class="material-symbols-outlined">check</span>
+                </div>
+                <div>
+                  <strong>Informasi persiapan sebelum mendaftar</strong>
+                  <span>Daftar berkas penting agar verifikasi berjalan lancar dan cepat disetujui.</span>
+                </div>
+              </div>
+
+              <div class="dana-feature-item">
+                <div class="dana-check-icon">
+                  <span class="material-symbols-outlined">check</span>
+                </div>
+                <div>
+                  <strong>Panduan memahami proses aktivasi</strong>
+                  <span>Pahami cara pemakaian QRIS usaha di tempat dagang secara praktis.</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#panduan" class="btn btn-primary">
+              <span>Pelajari Cara Daftarnya</span>
+              <span class="material-symbols-outlined">arrow_downward</span>
+            </a>
+          </div>
+
+          <!-- Right: Official DANA Bisnis Showcase Graphic -->
+          <div class="dana-showcase-wrapper reveal-on-scroll">
+            <div class="dana-showcase-glow"></div>
+            <div class="dana-showcase-card">
+              <img src="https://a.m.dana.id/resource/danaweb-v2/business/kyb-showcase-step-2.png" 
+                   alt="Tampilan Panduan Verifikasi Aplikasi DANA Bisnis" 
+                   class="dana-showcase-img"
+                   onerror="this.onerror=null; this.src='assets/images/dana-showcase.png';" />
+              <div class="dana-showcase-badge">
+                <span class="material-symbols-outlined">verified</span>
+                <span>Tampilan Resmi Layanan DANA Bisnis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION E: PERSIAPAN PENDAFTARAN (INTERACTIVE CHECKLIST)
+         ======================================================================== -->
+    <section class="section-checklist section-padding" id="persiapan">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="eyebrow-badge">
+            <span class="material-symbols-outlined text-[16px]">checklist</span>
+            <span>Checklist Persiapan</span>
+          </div>
+          <h2 class="section-title">Siapkan Ini Sebelum Daftar</h2>
+          <p class="section-subtitle">
+            Supaya prosesnya lebih terarah dan tidak bolak-balik mengisi data, pastikan kamu sudah menyiapkan hal-hal berikut di ponsel kamu. Centang untuk memeriksa kesiapanmu!
+          </p>
+        </div>
+
+        <div class="checklist-wrapper reveal-on-scroll">
+          <!-- Progress Box -->
+          <div class="checklist-progress-box">
+            <div class="progress-header">
+              <span class="progress-title" id="checklistProgressCount">0 dari 6 Siap</span>
+              <span class="progress-percentage" id="checklistProgressPercent">0%</span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="checklistProgressBar"></div>
+            </div>
+
+            <!-- Congratulation banner when 100% -->
+            <div class="checklist-congrats-banner" id="checklistCongrats">
+              <span class="material-symbols-outlined">check_circle</span>
+              <span>Hebat! Persiapanmu sudah lengkap. Kamu siap mengikuti langkah pendaftaran di bawah ini!</span>
+            </div>
+          </div>
+
+          <!-- Interactive Checklist Items Grid -->
+          <div class="checklist-items-grid">
+            <!-- Item 1 -->
+            <div class="checklist-item" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checklist-checkbox-custom">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+              <div class="checklist-content">
+                <h3>1. Smartphone &amp; Koneksi Internet</h3>
+                <p>Ponsel dengan koneksi internet yang stabil untuk mengakses aplikasi DANA tanpa gangguan.</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="checklist-item" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checklist-checkbox-custom">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+              <div class="checklist-content">
+                <h3>2. Akun DANA Aktif</h3>
+                <p>Nomor ponsel terdaftar aktif dan bisa menerima kode SMS OTP verifikasi pendaftaran.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="checklist-item" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checklist-checkbox-custom">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+              <div class="checklist-content">
+                <h3>3. Akun DANA Premium</h3>
+                <p>Akun yang telah terverifikasi KTP (apabila dipersyaratkan oleh sistem penyedia layanan).</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="checklist-item" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checklist-checkbox-custom">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+              <div class="checklist-content">
+                <h3>4. Informasi Usaha yang Benar</h3>
+                <p>Nama gerai/warung, kategori bidang bisnis, serta alamat lengkap lokasi usaha kamu.</p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="checklist-item" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checklist-checkbox-custom">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+              <div class="checklist-content">
+                <h3>5. Foto Usaha atau Produk</h3>
+                <p>Foto fisik tempat jualan, gerobak/etalase, atau contoh produk dagangan jika diminta.</p>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="checklist-item" tabindex="0" role="checkbox" aria-checked="false">
+              <div class="checklist-checkbox-custom">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+              <div class="checklist-content">
+                <h3>6. Kode Referral Resmi</h3>
+                <p>Siapkan kode referral <span class="checklist-code-badge">NAV9S4</span> saat proses pendaftaran.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits-disclaimer-note reveal-on-scroll" style="max-width: 860px; margin-inline: auto; margin-top: 1.5rem;">
+          <strong>Perhatian:</strong> Persyaratan lengkap dapat mengikuti ketentuan dan instruksi terbaru yang tertera di dalam aplikasi resmi DANA.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION F: PANDUAN PENDAFTARAN (VERTICAL STEPPER / TIMELINE)
+         ======================================================================== -->
+    <section class="section-steps section-padding" id="panduan">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="eyebrow-badge">
+            <span class="material-symbols-outlined text-[16px]">format_list_numbered</span>
+            <span>Langkah demi Langkah</span>
+          </div>
+          <h2 class="section-title">Cara Daftar DANA Bisnis, Langkah demi Langkah</h2>
+          <p class="section-subtitle">
+            Yuk, ikuti panduan terstruktur ini untuk mengetahui alur pendaftaran DANA Bisnis langsung dari aplikasi smartphone kamu.
+          </p>
+        </div>
+
+        <!-- Vertical Connected Stepper -->
+        <div class="stepper-timeline">
+          <!-- Step 1 -->
+          <div class="stepper-step reveal-on-scroll">
+            <div class="step-badge">1</div>
+            <div class="step-header">
+              <h3 class="step-title">Buka aplikasi DANA</h3>
+              <span class="step-tag">Tahap Awal</span>
+            </div>
+            <p class="step-body">
+              Masuk ke akun DANA kamu yang sudah terpasang di smartphone. Pastikan aplikasi sudah diperbarui ke versi terbaru melalui Google Play Store atau App Store.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="stepper-step reveal-on-scroll">
+            <div class="step-badge">2</div>
+            <div class="step-header">
+              <h3 class="step-title">Cari menu DANA Bisnis yang tersedia</h3>
+              <span class="step-tag">Navigasi Fitur</span>
+            </div>
+            <p class="step-body">
+              Pada layar utama, buka menu <strong>Lihat Semua</strong> (View All) atau telusuri bilah layanan finansial untuk menemukan ikon dan menu <strong>DANA Bisnis</strong>.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="stepper-step reveal-on-scroll">
+            <div class="step-badge">3</div>
+            <div class="step-header">
+              <h3 class="step-title">Mulai proses pendaftaran</h3>
+              <span class="step-tag">Registrasi Profil</span>
+            </div>
+            <p class="step-body">
+              Tekan tombol <strong>Daftar Sekarang</strong> untuk memulai pembuatan profil usaha dan memasukkan kode undangan/referral jika kolom tersebut tersedia.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="stepper-step reveal-on-scroll">
+            <div class="step-badge">4</div>
+            <div class="step-header">
+              <h3 class="step-title">Lengkapi informasi usaha</h3>
+              <span class="step-tag">Data Usaha</span>
+            </div>
+            <p class="step-body">
+              Isi nama toko/warung, kategori dagangan, lokasi usaha, jam operasional, serta rekening penampung saldo penjualan secara teliti dan sesuai fakta.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="stepper-step reveal-on-scroll">
+            <div class="step-badge">5</div>
+            <div class="step-header">
+              <h3 class="step-title">Ikuti instruksi verifikasi jika diminta</h3>
+              <span class="step-tag">Verifikasi Berkas</span>
+            </div>
+            <p class="step-body">
+              Unggah foto gerobak, etalase warung, atau contoh produk jika diminta. Pastikan foto memiliki pencahayaan jelas sebelum menekan tombol kirim.
+            </p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="stepper-step reveal-on-scroll">
+            <div class="step-badge">6</div>
+            <div class="step-header">
+              <h3 class="step-title">Kirim pengajuan dan pantau statusnya</h3>
+              <span class="step-tag">Pengajuan Selesai</span>
+            </div>
+            <p class="step-body">
+              Tunggu proses peninjauan oleh tim terkait. Notifikasi QRIS aktif akan segera muncul di dashboard akun usahamu jika pengajuan berhasil disetujui.
+            </p>
+          </div>
+        </div>
+
+        <!-- Security & Compliance Notice -->
+        <div class="step-security-banner reveal-on-scroll">
+          <div class="step-security-icon">
+            <span class="material-symbols-outlined">shield</span>
+          </div>
+          <div class="step-security-content">
+            <h4>Keamanan &amp; Ketentuan Verifikasi</h4>
+            <p>
+              Panduan ini bersifat edukatif dan mengacu pada panduan umum. QRIS Praktis <strong>tidak pernah meminta PIN, OTP, atau kata sandi</strong> akun Anda. Proses verifikasi dan persetujuan sepenuhnya wewenang pihak penyedia layanan resmi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION G: KODE REFERRAL (SPOTLIGHT CARD)
+         ======================================================================== -->
+    <section class="section-referral section-padding" id="referral">
+      <div class="container">
+        <div class="referral-card-wrapper reveal-on-scroll">
+          <div class="referral-radial-glow"></div>
+
+          <div class="eyebrow-badge">
+            <span class="material-symbols-outlined text-[16px]">vpn_key</span>
+            <span>Program Referral</span>
+          </div>
+
+          <h2 class="section-title">Jangan Lupa Kode Referral!</h2>
+
+          <p class="section-subtitle">
+            Saat mendaftar DANA Bisnis, perhatikan tahapan referral dan masukkan kode berikut jika tersedia pada formulir proses pendaftaran.
+          </p>
+
+          <div class="referral-code-box">
+            <div class="referral-code-left">
+              <span class="referral-code-label">Kode Referral Kamu</span>
+              <span class="referral-code-value" id="referralCode">NAV9S4</span>
+            </div>
+
+            <button type="button" class="referral-copy-btn" id="copyReferralBtn" aria-label="Salin Kode Referral">
+              <span class="material-symbols-outlined">content_copy</span>
+              <span class="btn-text">Salin Kode Referral</span>
+            </button>
+          </div>
+
+          <p class="referral-disclaimer-text">
+            Pastikan kode referral dimasukkan pada tahapan yang sesuai agar referral dapat tercatat berdasarkan ketentuan program. QRIS Praktis tidak mengklaim kode otomatis diterapkan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION H: CTA AKHIR (FULL-WIDTH DARK FOREST GREEN)
+         ======================================================================== -->
+    <section class="section-cta-final section-padding" id="ctaFinal">
+      <div class="cta-final-glow"></div>
+      <div class="container">
+        <div class="cta-final-content reveal-on-scroll">
+          <div class="eyebrow-badge eyebrow-hero" style="margin-inline: auto;">
+            <span class="pulse-dot"></span>
+            <span>LANGKAH SELANJUTNYA</span>
+          </div>
+
+          <h2 class="cta-final-title">Siap Mengenal DANA Bisnis untuk Usahamu?</h2>
+
+          <p class="cta-final-desc">
+            Setelah memahami panduannya, lanjutkan proses pendaftaran melalui aplikasi atau kanal resmi DANA.
+          </p>
+
+          <div class="cta-final-buttons">
+            <!-- Official DANA Portal link placeholder - Easily customizable -->
+            <a href="https://dana.id" target="_blank" rel="noopener noreferrer" class="btn btn-lime" aria-label="Buka situs resmi DANA">
+              <span>Buka DANA</span>
+              <span class="material-symbols-outlined">open_in_new</span>
+            </a>
+
+            <a href="#panduan" class="btn btn-outline-white">
+              <span class="material-symbols-outlined">arrow_upward</span>
+              <span>Kembali ke Panduan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION I: FAQ (ACCESSIBLE ACCORDION)
+         ======================================================================== -->
+    <section class="section-faq section-padding" id="faq">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="eyebrow-badge">
+            <span class="material-symbols-outlined text-[16px]">quiz</span>
+            <span>Bantuan &amp; Informasi</span>
+          </div>
+          <h2 class="section-title">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+          <p class="section-subtitle">
+            Jawaban praktis seputar QRIS dan panduan pendaftaran DANA Bisnis untuk para juragan UMKM.
+          </p>
+        </div>
+
+        <div class="faq-accordion-list reveal-on-scroll">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAnswer1">
+              <span>Apa itu DANA Bisnis?</span>
+              <span class="material-symbols-outlined faq-icon-chevron">expand_more</span>
+            </button>
+            <div class="faq-answer-pane" id="faqAnswer1">
+              <div class="faq-answer-inner">
+                DANA Bisnis adalah fitur dari dompet digital DANA yang dirancang untuk membantu pemilik usaha dan UMKM menerima pembayaran nontunai QRIS serta mengelola transaksi penjualan dengan mudah melalui smartphone.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAnswer2">
+              <span>Apakah harus memiliki akun DANA?</span>
+              <span class="material-symbols-outlined faq-icon-chevron">expand_more</span>
+            </button>
+            <div class="faq-answer-pane" id="faqAnswer2">
+              <div class="faq-answer-inner">
+                Ya, kamu perlu memiliki akun pengguna DANA aktif sebelum bisa mengakses dan mendaftarkan usahamu ke layanan DANA Bisnis.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAnswer3">
+              <span>Apakah perlu DANA Premium?</span>
+              <span class="material-symbols-outlined faq-icon-chevron">expand_more</span>
+            </button>
+            <div class="faq-answer-pane" id="faqAnswer3">
+              <div class="faq-answer-inner">
+                Pada umumnya, proses pendaftaran merchant memerlukan akun yang telah terverifikasi identitasnya (DANA Premium) demi kepatuhan regulasi transaksi keuangan dari Bank Indonesia.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAnswer4">
+              <span>Apakah semua usaha bisa mendaftar?</span>
+              <span class="material-symbols-outlined faq-icon-chevron">expand_more</span>
+            </button>
+            <div class="faq-answer-pane" id="faqAnswer4">
+              <div class="faq-answer-inner">
+                Sebagian besar usaha mikro, kecil, dan menengah seperti warung kelontong, kedai kopi, kios pulsa, jasa pangkas rambut, kuliner, dan pedagang pasar dapat mengajukan pendaftaran selama memenuhi ketentuan yang berlaku.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAnswer5">
+              <span>Di mana saya memasukkan kode referral?</span>
+              <span class="material-symbols-outlined faq-icon-chevron">expand_more</span>
+            </button>
+            <div class="faq-answer-pane" id="faqAnswer5">
+              <div class="faq-answer-inner">
+                Masukkan kode referral <strong>NAV9S4</strong> pada kolom 'Kode Referral / Undangan' saat tahap formulir pendaftaran DANA Bisnis di dalam aplikasi jika kolom tersebut tersedia.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAnswer6">
+              <span>Apakah pendaftaran pasti disetujui?</span>
+              <span class="material-symbols-outlined faq-icon-chevron">expand_more</span>
+            </button>
+            <div class="faq-answer-pane" id="faqAnswer6">
+              <div class="faq-answer-inner">
+                Persetujuan pendaftaran sepenuhnya bergantung pada hasil verifikasi kelayakan data dan dokumen oleh tim verifikator DANA sesuai kebijakan kepatuhan yang berlaku.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faqAnswer7">
+              <span>Bagaimana jika mengalami kendala?</span>
+              <span class="material-symbols-outlined faq-icon-chevron">expand_more</span>
+            </button>
+            <div class="faq-answer-pane" id="faqAnswer7">
+              <div class="faq-answer-inner">
+                Kamu dapat memeriksa kembali kejelasan foto dokumen atau menghubungi pusat bantuan resmi DANA (DANA Customer Care) melalui menu bantuan di dalam aplikasi DANA.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SECTION J: FOOTER & AFFILIATE TRANSPARENCY
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-logo">
+            <img src="assets/images/logo.png" alt="QRIS Praktis Logo" class="brand-logo-img" width="38" height="38" />
+            <div class="brand-text">
+              <span class="brand-title">QRIS Praktis</span>
+              <span class="brand-sub">Panduan Merchant UMKM</span>
+            </div>
+          </div>
+
+          <p class="footer-desc">
+            Pahami QRIS, permudah pembayaran usaha. Edukasi independen untuk digitalisasi transaksi warung, kedai kopi, dan UMKM di seluruh Indonesia.
+          </p>
+
+          <div class="footer-badges-wrap">
+            <span class="footer-badge">
+              <span class="material-symbols-outlined text-[15px]">verified_user</span>
+              <span>Panduan Independen</span>
+            </span>
+            <span class="footer-badge">
+              <span class="material-symbols-outlined text-[15px]">qr_code</span>
+              <span>Standar QRIS BI</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h4 class="footer-heading">Navigasi Halaman</h4>
+          <ul class="footer-links-list">
+            <li><a href="#beranda" class="footer-link">Beranda Utama</a></li>
+            <li><a href="#masalah" class="footer-link">Tantangan Usaha</a></li>
+            <li><a href="#manfaat" class="footer-link">Manfaat QRIS</a></li>
+            <li><a href="#kenalan" class="footer-link">Kenalan DANA Bisnis</a></li>
+            <li><a href="#persiapan" class="footer-link">Persiapan Syarat</a></li>
+            <li><a href="#panduan" class="footer-link">Panduan Pendaftaran</a></li>
+            <li><a href="#faq" class="footer-link">Pertanyaan (FAQ)</a></li>
+          </ul>
+        </div>
+
+        <!-- Official Resources (Configurable Links) -->
+        <div>
+          <h4 class="footer-heading">Kanal Resmi DANA</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://dana.id" target="_blank" rel="noopener noreferrer" class="footer-link">Situs Resmi DANA</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=id.dana" target="_blank" rel="noopener noreferrer" class="footer-link">DANA di Google Play</a></li>
+            <li><a href="https://apps.apple.com/id/app/dana-dompet-digital-indonesia/id1437114251" target="_blank" rel="noopener noreferrer" class="footer-link">DANA di App Store</a></li>
+            <li><a href="https://www.bi.go.id/id/fungsi-utama/sistem-pembayaran/ritel/qris/default.aspx" target="_blank" rel="noopener noreferrer" class="footer-link">Informasi QRIS Bank Indonesia</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Legal & Affiliate Transparency Disclaimer -->
+      <div class="footer-bottom">
+        <div class="footer-disclaimer-box">
+          <p>
+            <strong>Transparansi &amp; Batasan Tanggung Jawab:</strong> QRIS Praktis merupakan platform panduan edukatif independen untuk pelaku usaha mikro, kecil, dan menengah (UMKM). Website ini <em>bukan merupakan situs resmi DANA</em> dan tidak mewakili PT Espay Debit Indonesia Koe maupun Bank Indonesia. Seluruh proses pendaftaran, verifikasi, aktivasi, dan ketentuan layanan mengikuti kebijakan resmi pihak DANA. Tautan atau kode referral dapat digunakan dalam program afiliasi resmi.
+          </p>
+          <div class="footer-copyright">
+            &copy; 2024&ndash;2026 QRIS Praktis. Seluruh hak cipta dilindungi.
+          </div>
+        </div>
+
+        <div class="footer-trust-tag">
+          <span class="material-symbols-outlined text-secondary">security</span>
+          <span>100% Edukasi Bebas Biaya</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Kembali ke atas">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+</body>
+</html>
