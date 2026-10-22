@@ -113,6 +113,7 @@ function initMobileNavigation() {
   }, { passive: true });
 }
 
+/* ==========================================================================
    2b. DESKTOP NAVBAR DROPDOWN ("Lainnya")
    ========================================================================== */
 function initNavbarDropdown() {
