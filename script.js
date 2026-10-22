@@ -7,7 +7,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initMobileNavigation();
+<<<<<<< HEAD
   initNavbarDropdown();
+=======
+>>>>>>> 14308d9d8da98e804ba4b82743180b400fd99206
   initHeroParallax();
   initSmoothScrollAndActiveNav();
   initInteractiveChecklist();
@@ -114,6 +117,7 @@ function initMobileNavigation() {
 }
 
 /* ==========================================================================
+<<<<<<< HEAD
    2b. DESKTOP NAVBAR DROPDOWN ("Lainnya")
    ========================================================================== */
 function initNavbarDropdown() {
@@ -176,6 +180,8 @@ function initNavbarDropdown() {
 }
 
 /* ==========================================================================
+=======
+>>>>>>> 14308d9d8da98e804ba4b82743180b400fd99206
    3. HERO PARALLAX BACKGROUND
    ========================================================================== */
 function initHeroParallax() {
@@ -214,15 +220,22 @@ function initHeroParallax() {
    ========================================================================== */
 function initSmoothScrollAndActiveNav() {
   const sections = document.querySelectorAll('section[id]');
+<<<<<<< HEAD
   const desktopLinks = document.querySelectorAll('.desktop-nav .nav-link:not(.dropdown-toggle)');
   const dropdownToggle = document.getElementById('dropdownToggle');
   const dropdownLinks = document.querySelectorAll('.dropdown-item');
+=======
+  const desktopLinks = document.querySelectorAll('.desktop-nav .nav-link');
+>>>>>>> 14308d9d8da98e804ba4b82743180b400fd99206
   const mobileLinks = document.querySelectorAll('.mobile-nav-item');
 
   if (!sections.length) return;
 
+<<<<<<< HEAD
   const dropdownSectionIds = ['persiapan', 'panduan', 'faq'];
 
+=======
+>>>>>>> 14308d9d8da98e804ba4b82743180b400fd99206
   // Active section observer
   const observerOptions = {
     root: null,
@@ -245,6 +258,7 @@ function initSmoothScrollAndActiveNav() {
           }
         });
 
+<<<<<<< HEAD
         // Dropdown toggle & sub-items active state
         if (dropdownToggle) {
           if (dropdownSectionIds.includes(activeId)) {
@@ -262,6 +276,8 @@ function initSmoothScrollAndActiveNav() {
           }
         });
 
+=======
+>>>>>>> 14308d9d8da98e804ba4b82743180b400fd99206
         mobileLinks.forEach((link) => {
           if (link.getAttribute('href') === `#${activeId}`) {
             link.classList.add('active');
